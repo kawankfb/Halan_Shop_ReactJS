@@ -1,0 +1,94 @@
+nav {
+    width: 99%;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+nav button {
+    background-color: aliceblue;
+    margin: 5px;
+    float: right;
+    display: inline-block;
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
+    border: 0ch;
+}
+
+.mobileNavDiv {
+    width: 99%;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.mobileNavBarLogo {
+
+    float: left;
+    height: inherit;
+    display: inline-block;
+    border-radius: 3px;
+    border: 0ch;
+}
+
+nav .NavBarLogo {
+    float: left;
+    height: inherit;
+    display: inline-block;
+    border-radius: 3px;
+    padding: auto;
+    border: 0ch;
+}
+
+
+
+.mobileNavBarMenu {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    float: right;
+    display: inline-block;
+    border-radius: 3px;
+    height: inherit;
+    padding: auto;
+    border: 0ch;
+}
+.mobileNavBar {
+    position: absolute;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: rgb(242, 85, 98);
+    display: none;
+}
+
+.mobileNavBarButton {
+    display: block;
+    width: 240px;
+    height: 15%;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: larger;
+    background-color: inherit;
+    float: right;
+
+}
+
+.mobileNavBarClose {
+    display: block;
+    width: 60px;
+    height: 8%;
+    margin-left: 230px;
+    margin-top: 5px;
+    color: white;
+    background-color: inherit;
+    float: right;
+
+}
+
+@keyframes slide {
+    100% { right: 0; }
+}

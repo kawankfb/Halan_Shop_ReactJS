@@ -1,0 +1,7 @@
+button {
+    background-color: aqua;
+}
+.currentCountDisplay{
+    background-color: aquamarine;
+    max-width: 30%;
+}
