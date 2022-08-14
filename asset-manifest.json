@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Halan_Shop_ReactJS%20/static/css/main.eddaab9b.css",
+    "main.js": "/Halan_Shop_ReactJS%20/static/js/main.6af64422.js",
+    "index.html": "/Halan_Shop_ReactJS%20/index.html",
+    "main.eddaab9b.css.map": "/Halan_Shop_ReactJS%20/static/css/main.eddaab9b.css.map",
+    "main.6af64422.js.map": "/Halan_Shop_ReactJS%20/static/js/main.6af64422.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eddaab9b.css",
+    "static/js/main.6af64422.js"
+  ]
+}
