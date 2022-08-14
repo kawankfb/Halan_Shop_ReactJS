@@ -4,7 +4,7 @@ nav {
     margin-right: auto;
     margin-left: auto;
 }
-nav button {
+nav button,Link {
     background-color: aliceblue;
     margin: 5px;
     float: right;
@@ -92,3 +92,21 @@ nav .NavBarLogo {
 @keyframes slide {
     100% { right: 0; }
 }
+
+@media screen and (min-width: 480px) {
+    nav {
+      background-color: lightgreen;
+    }
+  }
+
+  @media screen and (min-width: 720px) {
+    nav {
+      background-color: green;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    nav {
+      background-color: blue;
+    }
+  }
