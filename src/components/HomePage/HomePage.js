@@ -1,15 +1,15 @@
 import React from "react";
-import "./AboutPage.css";
+import "./HomePage.css";
 
-const AboutPage = (props) => {
+const HomePage = (props) => {
 return (
     <div>
         <h1 className="description-text">
-            Hi, this is our about page
+            Hi, this is our home page
         </h1>
     </div>
     
 );
 }
 
-export default AboutPage
+export default HomePage

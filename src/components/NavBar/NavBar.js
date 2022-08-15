@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./NavBar.css";
+import logo from './icons/logo.png';
+import menuIcon from './icons/icons8-menu.svg';
+import closeMenuIcon from './icons/white-close-icon.svg';
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
+
+
+
 
 const NavBar = (props) => {
 
@@ -48,32 +55,46 @@ const NavBar = (props) => {
     return (
     <div>
         <nav>
-        <button onClick={goToHomePage}>Register</button>
-        <button onClick={goToHomePage}>Home</button>
-        <button onClick={goToHomePage}>Categories</button>
-        <button onClick={goToHomePage}>Contact us</button>
-        <button onClick={goToHomePage}>About us</button>
-        <img className="NavBarLogo" src="/logo.png" alt="logo"/>
+        <Link to="/" className="site-logo">
+        <img className="NavBarLogo" src={logo} alt="logo"/>
+      </Link>
+      <ul className="NavBarUL">
+        <CustomLink to="/contact_us">Contact Us</CustomLink>
+        <CustomLink to="/about_us">About Us</CustomLink>
+      </ul>
         </nav>
     </div>
     );
     else 
     return (
         <div className="mobileNavDiv">
-        <img className="mobileNavBarMenu" src="/icons8-menu.svg" alt="menu" onClick={openMobileNavBar}/>
+        <img className="mobileNavBarMenu" src={menuIcon} alt="menu" onClick={openMobileNavBar}/>
         <nav className="mobileNavBar" style={{
     display:mobileNavOpen ? "inline" : "none",
     animation:mobileNavOpen ? "slide 0.5s forwards" : "none",
-  }}>   <img className="mobileNavBarClose" src="/icons/white-close-icon.svg" alt="close" onClick={closeMobileNavBar}/>
+  }}>   <img className="mobileNavBarClose" src={closeMenuIcon} alt="close" onClick={closeMobileNavBar}/>
         <button className="mobileNavBarButton" onClick={goToHomePage}>Register</button>
         <button className="mobileNavBarButton" onClick={goToHomePage}>Home</button>
         <button className="mobileNavBarButton" onClick={goToHomePage}>Categories</button>
         <button className="mobileNavBarButton" onClick={goToHomePage}>Contact us</button>
         <button className="mobileNavBarButton" onClick={goToHomePage}>About us</button>
         </nav>
-        <img className="mobileNavBarLogo" src="/logo.png" alt="logo"/>
+        <img className="mobileNavBarLogo" src={logo} alt="logo"/>
     </div>
     )
 }
+
+function CustomLink({ to, children, ...props }) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  
+    return (
+      <li className={isActive ? "nav-button-active" : "nav-button"}>
+        <Link className="nav-button-link-text" to={to} {...props}>
+          {children}
+        </Link>
+      </li>
+    )
+  }
 
 export default NavBar

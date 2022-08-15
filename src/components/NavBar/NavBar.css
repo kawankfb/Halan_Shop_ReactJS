@@ -3,8 +3,14 @@ nav {
     height: 60px;
     margin-right: auto;
     margin-left: auto;
+    background-color: azure;
 }
-nav button,Link {
+
+.NavBarUL{
+  list-style: none;
+}
+
+.nav-button {
     background-color: aliceblue;
     margin: 5px;
     float: right;
@@ -13,6 +19,22 @@ nav button,Link {
     height: 30px;
     padding: 5px;
     border: 0ch;
+}
+.nav-button-link-text{
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+
+}
+.nav-button-active {
+  background-color: hotpink;
+  margin: 5px;
+  float: right;
+  display: inline-block;
+  border-radius: 3px;
+  height: 30px;
+  padding: 5px;
+  border: 0ch;
 }
 
 .mobileNavDiv {
@@ -30,7 +52,7 @@ nav button,Link {
     border: 0ch;
 }
 
-nav .NavBarLogo {
+.site-logo {
     float: left;
     height: inherit;
     display: inline-block;
@@ -38,6 +60,15 @@ nav .NavBarLogo {
     padding: auto;
     border: 0ch;
 }
+.NavBarLogo {
+  float: left;
+  height: inherit;
+  display: inline-block;
+  border-radius: 3px;
+  padding: auto;
+  border: 0ch;
+}
+
 
 
 
@@ -95,18 +126,18 @@ nav .NavBarLogo {
 
 @media screen and (min-width: 480px) {
     nav {
-      background-color: lightgreen;
+      
     }
   }
 
   @media screen and (min-width: 720px) {
     nav {
-      background-color: green;
+      
     }
   }
 
   @media screen and (min-width: 1024px) {
     nav {
-      background-color: blue;
+      
     }
   }
