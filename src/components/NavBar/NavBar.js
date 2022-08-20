@@ -14,21 +14,21 @@ const NavBar = (props) => {
     const[showMobileNavMenu, setShowMobileNavMenu]= useState(false);
 
     useEffect(()=>{
-        if(window.innerWidth > 767){
+        if(window.innerWidth > 719){
             setShowMobileNavMenu(false);
         }
-        else if(window.innerWidth < 767){
+        else if(window.innerWidth < 719){
             setShowMobileNavMenu(true);
         }
     },[]);
 
     useEffect(()=>{
         const handleResize = () =>{
-            if(window.innerWidth > 767){
+            if(window.innerWidth > 719){
                 setMobileNavOpen(false);
                 setShowMobileNavMenu(false);
             }
-            else if(window.innerWidth < 767){
+            else if(window.innerWidth < 719){
                 setShowMobileNavMenu(true);
             }
         };
