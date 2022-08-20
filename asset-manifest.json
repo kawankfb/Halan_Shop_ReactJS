@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Halan_Shop_ReactJS/static/css/main.13a4fe81.css",
-    "main.js": "/Halan_Shop_ReactJS/static/js/main.3ce2ef85.js",
+    "main.js": "/Halan_Shop_ReactJS/static/js/main.16f24df2.js",
     "static/media/logo.png": "/Halan_Shop_ReactJS/static/media/logo.8278d4716097d425633c.png",
     "static/media/white-close-icon.svg": "/Halan_Shop_ReactJS/static/media/white-close-icon.f35d1d3c85408b0b60caea556281511a.svg",
     "index.html": "/Halan_Shop_ReactJS/index.html",
     "static/media/icons8-menu.svg": "/Halan_Shop_ReactJS/static/media/icons8-menu.aabb9077d3f6d5aa860cb15e9c876a83.svg",
     "main.13a4fe81.css.map": "/Halan_Shop_ReactJS/static/css/main.13a4fe81.css.map",
-    "main.3ce2ef85.js.map": "/Halan_Shop_ReactJS/static/js/main.3ce2ef85.js.map"
+    "main.16f24df2.js.map": "/Halan_Shop_ReactJS/static/js/main.16f24df2.js.map"
   },
   "entrypoints": [
     "static/css/main.13a4fe81.css",
-    "static/js/main.3ce2ef85.js"
+    "static/js/main.16f24df2.js"
   ]
 }
