@@ -74,12 +74,15 @@ const NavBar = (props) => {
     animation:mobileNavOpen ? "slide 0.5s forwards" : "none",
   }}>   <img className="mobileNavBarClose" src={closeMenuIcon} alt="close" onClick={closeMobileNavBar}/>
         <button className="mobileNavBarButton" onClick={goToHomePage}>Register</button>
-        <button className="mobileNavBarButton" onClick={goToHomePage}>Home</button>
+        <CustomLink to="/">Home</CustomLink>
         <button className="mobileNavBarButton" onClick={goToHomePage}>Categories</button>
-        <button className="mobileNavBarButton" onClick={goToHomePage}>Contact us</button>
-        <button className="mobileNavBarButton" onClick={goToHomePage}>About us</button>
+        <CustomLink to="/contact_us">Contact Us</CustomLink>
+        <CustomLink to="/about_us">About Us</CustomLink>
         </nav>
+        <Link to="/" className="site-logo">
         <img className="mobileNavBarLogo" src={logo} alt="logo"/>
+      </Link>
+        
     </div>
     )
 }
