@@ -65,11 +65,11 @@ return (
             Hi, this is our home page
         </h1>
         <ul className="products-list">
-            {productsArray.map(product=><li className="product-card-li"><ProductCard name ={product.name} price={product.current_price}/></li>)}
+            {productsArray.map(product=><li className="product-card-li"><ProductCard name ={product.name} price={product.current_price} id={product.id}/></li>)}
         </ul>
 
         <ul className="products-list">
-            {productsArray.map(product=><li className="product-card-li"><ProductCard name ={product.name} price={product.current_price}/></li>)}
+            {productsArray.map(product=><li className="product-card-li"><ProductCard name ={product.name} price={product.current_price} id={product.id}/></li>)}
         </ul>
     </div>
     
