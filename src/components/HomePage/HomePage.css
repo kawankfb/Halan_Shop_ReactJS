@@ -1,3 +1,22 @@
 .description-text{
     font-size: 5rem;
 }
+
+.products-list{
+    display: flex;
+    width: 96%;
+    height: 240px;
+    overflow: scroll;
+    padding-left: 2%;
+    padding-right: 2%;
+    direction: rtl;
+    list-style: none;
+
+}
+
+.product-card-li{
+    height: 96%;
+    width: 140px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
