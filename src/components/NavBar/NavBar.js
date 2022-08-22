@@ -59,8 +59,12 @@ const NavBar = (props) => {
         <img className="NavBarLogo" src={logo} alt="logo"/>
       </Link>
       <ul className="NavBarUL">
+      <CustomLink to="/">Home</CustomLink>
+        <CustomLink to="/categories">Categories</CustomLink>
         <CustomLink to="/contact_us">Contact Us</CustomLink>
         <CustomLink to="/about_us">About Us</CustomLink>
+        <CustomLink to="/sign_in">Sign in</CustomLink>
+        <CustomLink to="/sign_up">Sign up</CustomLink>
       </ul>
         </nav>
     </div>
@@ -73,11 +77,12 @@ const NavBar = (props) => {
     display:mobileNavOpen ? "inline" : "none",
     animation:mobileNavOpen ? "slide 0.5s forwards" : "none",
   }}>   <img className="mobileNavBarClose" src={closeMenuIcon} alt="close" onClick={closeMobileNavBar}/>
-        <button className="mobileNavBarButton" onClick={goToHomePage}>Register</button>
         <CustomLink to="/">Home</CustomLink>
-        <button className="mobileNavBarButton" onClick={goToHomePage}>Categories</button>
+        <CustomLink to="/categories">Categories</CustomLink>
         <CustomLink to="/contact_us">Contact Us</CustomLink>
         <CustomLink to="/about_us">About Us</CustomLink>
+        <CustomLink to="/sign_in">Sign in</CustomLink>
+        <CustomLink to="/sign_up">Sign up</CustomLink>
         </nav>
         <Link to="/" className="site-logo">
         <img className="mobileNavBarLogo" src={logo} alt="logo"/>

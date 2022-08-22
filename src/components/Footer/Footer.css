@@ -1,0 +1,9 @@
+.footer-div-internal{
+  display: block;
+  height: inherit;
+  width: 100%;
+  margin: 0;
+  height: inherit;
+  position: relative;
+  background-color: rgb(255, 200, 200);
+}

@@ -23,7 +23,7 @@ const AboutPage = (props) => {
 
     
 return (
-    <div>
+    <div className="about-page-div">
         <ul className="about-ul">
             {getAbouts().map((card,index) => {
                 console.log(card);
