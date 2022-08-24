@@ -1,0 +1,47 @@
+.category-card {
+  border: 1px solid rgb(253, 186, 208);
+  border-radius: 20px;
+  margin: 5px;
+  display: block;
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.category-picture-placeholder{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 70%;
+  width: inherit;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.category-name-placeholder{
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  border-top: 1px solid grey;
+  height: 20%;
+  width: inherit;
+  display: inline-flex;
+  justify-content: center;
+}
+.category-image {
+  width: 90%;
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 90%;
+}
+
+.category-name {
+  font-size: 1.2rem;
+  margin-top: 0%;
+  width: inherit;
+  height: inherit;
+  
+}

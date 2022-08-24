@@ -1,3 +1,21 @@
-.description-text{
-    font-size: 5rem;
+.category-page-div{
+    display: block;
+    min-height: 100vh;
+    overflow: scroll;
+    width: 100%;
 }
+.categories-list-ul{
+position: relative;
+display: grid;
+grid-template-columns: 25vh 25vh;
+justify-content: space-evenly;
+width: inherit;
+column-gap: 10px;
+row-gap: 10px;
+}
+.category-card-li{
+    position: relative;
+    display: block;
+    width: inherit;
+    height: 25vh;
+    }
