@@ -20,8 +20,8 @@ const ProductCard = (props) => {
     };
 
     return (
-      <div className="product-card">
-
+      
+<Link to={"/product/"+id} className="product-card">
           <div className="picture-placeholder">
             <img className="product-image" src={imageSrc} onError={imageOnErrorHandler} alt="product picture"/>
           </div>
@@ -31,7 +31,8 @@ const ProductCard = (props) => {
           <div className="price-placeholder">
             <p className="product-price">{price}</p>
           </div>
-      </div>
+      </Link>
+        
     );
   }
 

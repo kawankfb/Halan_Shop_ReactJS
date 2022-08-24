@@ -1,3 +1,55 @@
-.description-text{
-    font-size: 5rem;
+.images-and-abstract{
+    width: 100%;
+    display: block;
+    position: relative;
 }
+.images-div{
+
+    width: inherit;
+    height: 40vh;
+    margin: 5px;
+
+}
+.preview-image{
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+    
+    
+    
+}
+.abstract-div{
+    width: inherit;
+    height: 40vh;
+    border-top: 3px solid rgb(250, 180, 180);
+
+
+}
+
+
+
+@media screen and (min-width: 480px) {
+    .images-and-abstract{
+        display: flex;
+        justify-content: space-between;
+        direction: rtl;
+        height: 50vh;
+        border: 1px solid rgb(250, 180, 180);
+        border-radius: 10px;
+    }
+    .images-div{
+
+        width: 50%;
+        height: inherit;
+        margin: 0;
+    
+    }
+    .abstract-div{
+        width: 50%;
+        height: inherit;
+        border-right: 1px solid rgb(250, 180, 180);
+        border-top: 0;
+    
+    }
+    }
+  

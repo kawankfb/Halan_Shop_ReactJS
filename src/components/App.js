@@ -8,6 +8,8 @@ import BasketPage from "./BasketPage/BasketPage";
 import CategoriesPage from "./CategoriesPage/CategoriesPage";
 import SignInPage from "./SignInPage/SignInPage";
 import SignUpPage from "./SignUpPage/SignUpPage";
+import ProductPage from "./ProductPage/ProductPage";
+import IndexProductsPage from "./IndexProductsPage/IndexProductsPage";
 import './App.css'
 import Footer from "./Footer/Footer";
 
@@ -18,6 +20,8 @@ const App = () =>{
         <div className="container">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+          <Route path="/index_products" element={<IndexProductsPage />} />
           <Route path="/contact_us" element={<ContactPage />} />
           <Route path="/basket" element={<BasketPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
