@@ -19,3 +19,37 @@ row-gap: 10px;
     width: inherit;
     height: 25vh;
     }
+
+
+
+
+@media screen and (min-width: 480px) {
+    .categories-list-ul{
+        grid-template-columns: 25vh 25vh 25vh;
+       
+        }
+
+}
+      
+@media screen and (min-width: 768px) {
+    .categories-list-ul{
+        grid-template-columns: 25vh 25vh 25vh 25vh;
+       
+        }
+
+}
+@media screen and (min-width: 1024px) {
+    .categories-list-ul{
+        grid-template-columns: 25vh 25vh 25vh 25vh 25vh;
+       
+        }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .categories-list-ul{
+        grid-template-columns: 25vh 25vh 25vh 25vh 25vh 25vh;
+       
+        }
+
+}

@@ -14,21 +14,21 @@ const NavBar = (props) => {
     const[showMobileNavMenu, setShowMobileNavMenu]= useState(false);
 
     useEffect(()=>{
-        if(window.innerWidth > 719){
+        if(window.innerWidth > 767){
             setShowMobileNavMenu(false);
         }
-        else if(window.innerWidth < 719){
+        else if(window.innerWidth < 767){
             setShowMobileNavMenu(true);
         }
     },[]);
 
     useEffect(()=>{
         const handleResize = () =>{
-            if(window.innerWidth > 719){
+            if(window.innerWidth > 767){
                 setMobileNavOpen(false);
                 setShowMobileNavMenu(false);
             }
-            else if(window.innerWidth < 719){
+            else if(window.innerWidth < 767){
                 setShowMobileNavMenu(true);
             }
         };
@@ -97,11 +97,11 @@ function CustomLink({ to, children, ...props }) {
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
   
     return (
-      <li className={isActive ? "nav-button-active" : "nav-button"}>
-        <Link className="nav-button-link-text" to={to} {...props}>
+        <Link className={isActive ? "nav-button-active" : "nav-button"} to={to} {...props}>
+          <text className="nav-button-link-text" >
           {children}
+          </text>
         </Link>
-      </li>
     )
   }
 

@@ -6,4 +6,13 @@ html, body{
  * {
   box-sizing: border-box;  
  }
+ ::-webkit-scrollbar-thumb{
+    background:  rgb(224, 17, 95);
+    border-radius: 5px;
+ }
  
+
+ ::-webkit-scrollbar {
+    background: rgb(255, 209, 220);
+  border-radius: 10px;
+ }

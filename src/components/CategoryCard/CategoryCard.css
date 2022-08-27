@@ -1,5 +1,5 @@
 .category-card {
-  border: 1px solid rgb(253, 186, 208);
+  border: 1px solid rgb(255, 110, 199);
   border-radius: 20px;
   margin: 5px;
   display: block;
@@ -30,11 +30,8 @@
 }
 .category-image {
   width: 90%;
-  position: absolute;
-  top: 5%;
-  right: 0%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-top: 5%;
+  object-fit: contain;
   height: 90%;
 }
 
