@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Halan_Shop_ReactJS/static/css/main.e0404070.css",
-    "main.js": "/Halan_Shop_ReactJS/static/js/main.d9d35cbb.js",
+    "main.css": "/Halan_Shop_ReactJS/static/css/main.44f78509.css",
+    "main.js": "/Halan_Shop_ReactJS/static/js/main.e9fd25c7.js",
     "static/media/logo.png": "/Halan_Shop_ReactJS/static/media/logo.8278d4716097d425633c.png",
     "static/media/white-close-icon.svg": "/Halan_Shop_ReactJS/static/media/white-close-icon.f35d1d3c85408b0b60caea556281511a.svg",
     "index.html": "/Halan_Shop_ReactJS/index.html",
     "static/media/icons8-menu.svg": "/Halan_Shop_ReactJS/static/media/icons8-menu.aabb9077d3f6d5aa860cb15e9c876a83.svg",
-    "main.e0404070.css.map": "/Halan_Shop_ReactJS/static/css/main.e0404070.css.map",
-    "main.d9d35cbb.js.map": "/Halan_Shop_ReactJS/static/js/main.d9d35cbb.js.map"
+    "main.44f78509.css.map": "/Halan_Shop_ReactJS/static/css/main.44f78509.css.map",
+    "main.e9fd25c7.js.map": "/Halan_Shop_ReactJS/static/js/main.e9fd25c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0404070.css",
-    "static/js/main.d9d35cbb.js"
+    "static/css/main.44f78509.css",
+    "static/js/main.e9fd25c7.js"
   ]
 }
