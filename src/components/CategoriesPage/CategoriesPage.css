@@ -2,8 +2,12 @@
     display: block;
     min-height: 100vh;
     overflow: scroll;
+    
     width: 100%;
 }
+.category-page-div::-webkit-scrollbar {
+    display: none;
+  }
 .categories-list-ul{
 position: relative;
 display: grid;
@@ -38,6 +42,7 @@ row-gap: 10px;
         }
 
 }
+
 @media screen and (min-width: 1024px) {
     .categories-list-ul{
         grid-template-columns: 25vh 25vh 25vh 25vh 25vh;

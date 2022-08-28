@@ -3,7 +3,9 @@ nav {
     height: 60px;
     margin-right: auto;
     margin-left: auto;
-    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 209, 220);
     z-index: 999;
 }
 
@@ -13,7 +15,7 @@ nav {
 }
 
 .nav-button {
-    background-color: aliceblue;
+    background-color: white;
     margin: 5px;
     float: right;
     display: inline-block;
@@ -21,18 +23,20 @@ nav {
     height: 30px;
     padding: 5px;
     border: 0ch;
+    color: black;
     text-decoration: none;
 }
 .nav-button-link-text{
   text-decoration: none;
   vertical-align: middle;
-  color: black;
+  color: inherit;
 
   font-size: 1rem;
 
 }
 .nav-button-active {
-  background-color: rgb(255, 139, 176);
+  background-color: rgb(224, 17, 95);
+  color: white;
   margin: 5px;
   float: right;
   display: inline-block;
@@ -51,22 +55,35 @@ nav {
 }
 .mobileNavBarLogo {
 
-    float: left;
     height: inherit;
     display: inline-block;
     border-radius: 3px;
     border: 0ch;
 }
+.nav-bar-left-side{
+  height: inherit;
+  display: inline-flex;
+  width: 120px;
+  justify-content: space-between;
+  border-radius: 3px;
+    padding: auto;
+    border: 0ch;
 
-.site-logo {
-    float: left;
+}
+
+.site-logo, .basket-button {
     height: inherit;
     display: inline-block;
     border-radius: 3px;
     padding: auto;
     border: 0ch;
 }
-.NavBarLogo {
+
+.basket-button {
+  padding-left: 15px;
+}
+
+.NavBarLogo, .basket-button-icon {
   float: left;
   height: inherit;
   display: inline-block;
@@ -75,6 +92,9 @@ nav {
   border: 0ch;
 }
 
+.basket-button-icon {
+  padding: 5px;
+}
 
 
 
@@ -130,13 +150,17 @@ nav {
   cursor: pointer;
 }
 
+.mobileNavBarMenu:hover {
+  cursor: pointer;
+}
+
 @keyframes slide {
     100% { right: 0; }
 }
 
 @media screen and (width< 768px) {
   .nav-button, .nav-button-active  {
-    background-color: aliceblue;
+    background-color: white;
     color: black;
     margin: 5px;
     display: flex;

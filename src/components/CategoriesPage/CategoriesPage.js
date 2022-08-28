@@ -18,7 +18,7 @@ const CategoriesPage = (props) => {
    }, []);
 
     const getAllCategories = () =>{
-        axios.get("http://127.0.0.1:80/api/categories", {
+        axios.get(process.env.REACT_APP_API_URL +"categories", {
           })
           .then(function (response) {
             setCategoriesArray(response.data);

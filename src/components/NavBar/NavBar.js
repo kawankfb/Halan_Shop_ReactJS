@@ -55,16 +55,23 @@ const NavBar = (props) => {
     return (
     <div>
         <nav>
-        <Link to="/" className="site-logo">
-        <img className="NavBarLogo" src={logo} alt="logo"/>
-      </Link>
+            <div className="nav-bar-left-side">
+                
+            <Link to="/" className="site-logo">
+             <img className="NavBarLogo" src={logo} alt="logo"/>
+            </Link>
+
+            <Link to="/basket" className="basket-button">
+            <img className="basket-button-icon" src={process.env.PUBLIC_URL +"/icons/shopping-cart-icon.svg"} alt="logo"/>
+            </Link>
+            </div>
       <ul className="NavBarUL">
-      <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/categories">Categories</CustomLink>
-        <CustomLink to="/contact_us">Contact Us</CustomLink>
-        <CustomLink to="/about_us">About Us</CustomLink>
-        <CustomLink to="/sign_in">Sign in</CustomLink>
-        <CustomLink to="/sign_up">Sign up</CustomLink>
+      <CustomLink to="/">صفحه اصلی</CustomLink>
+        <CustomLink to="/categories">دسته بندی</CustomLink>
+        <CustomLink to="/contact_us">تماس با ما</CustomLink>
+        <CustomLink to="/about_us">درباره ما</CustomLink>
+        <CustomLink to="/sign_in">ورود</CustomLink>
+        <CustomLink to="/sign_up">ثبت نام</CustomLink>
       </ul>
         </nav>
     </div>
@@ -77,16 +84,24 @@ const NavBar = (props) => {
     display:mobileNavOpen ? "inline" : "none",
     animation:mobileNavOpen ? "slide 0.5s forwards" : "none",
   }}>   <img className="mobileNavBarClose" src={closeMenuIcon} alt="close" onClick={closeMobileNavBar}/>
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/categories">Categories</CustomLink>
-        <CustomLink to="/contact_us">Contact Us</CustomLink>
-        <CustomLink to="/about_us">About Us</CustomLink>
-        <CustomLink to="/sign_in">Sign in</CustomLink>
-        <CustomLink to="/sign_up">Sign up</CustomLink>
+        <CustomLink to="/">صفحه اصلی</CustomLink>
+        <CustomLink to="/categories">دسته بندی</CustomLink>
+        <CustomLink to="/contact_us">تماس با ما</CustomLink>
+        <CustomLink to="/about_us">درباره ما</CustomLink>
+        <CustomLink to="/sign_in">ورود</CustomLink>
+        <CustomLink to="/sign_up">ثبت نام</CustomLink>
+        <CustomLink to="/basket">سبد خرید</CustomLink>
         </nav>
-        <Link to="/" className="site-logo">
-        <img className="mobileNavBarLogo" src={logo} alt="logo"/>
-      </Link>
+        <div className="nav-bar-left-side">
+                
+                <Link to="/" className="site-logo">
+                 <img className="NavBarLogo" src={logo} alt="logo"/>
+                </Link>
+    
+                <Link to="/basket" className="basket-button">
+                <img className="basket-button-icon" src={process.env.PUBLIC_URL +"/icons/shopping-cart-icon.svg"} alt="logo"/>
+                </Link>
+                </div>
         
     </div>
     )

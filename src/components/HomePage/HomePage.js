@@ -12,7 +12,7 @@ const HomePage = (props) => {
    }, []);
 
     const getAllProducts = () =>{
-        axios.get("http://127.0.0.1:80/api/products", {
+        axios.get(process.env.REACT_APP_API_URL +"products", {
             params: {
               page:1
             }
