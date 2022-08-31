@@ -11,9 +11,9 @@
 .categories-list-ul{
 position: relative;
 display: grid;
-grid-template-columns: 25vh 25vh;
+grid-template-columns: 45vw 45vw;
 justify-content: space-evenly;
-width: inherit;
+width: 100%;
 column-gap: 10px;
 row-gap: 10px;
 }
@@ -21,7 +21,7 @@ row-gap: 10px;
     position: relative;
     display: block;
     width: inherit;
-    height: 25vh;
+    height: 180px;
     }
 
 
@@ -29,7 +29,7 @@ row-gap: 10px;
 
 @media screen and (min-width: 480px) {
     .categories-list-ul{
-        grid-template-columns: 25vh 25vh 25vh;
+        grid-template-columns: 30vw 30vw 30vw;
        
         }
 
@@ -37,7 +37,7 @@ row-gap: 10px;
       
 @media screen and (min-width: 768px) {
     .categories-list-ul{
-        grid-template-columns: 25vh 25vh 25vh 25vh;
+        grid-template-columns: 22.5vw 22.5vw 22.5vw 22.5vw;
        
         }
 
@@ -45,7 +45,7 @@ row-gap: 10px;
 
 @media screen and (min-width: 1024px) {
     .categories-list-ul{
-        grid-template-columns: 25vh 25vh 25vh 25vh 25vh;
+        grid-template-columns: 18vw 18vw 18vw 18vw 18vw;
        
         }
 

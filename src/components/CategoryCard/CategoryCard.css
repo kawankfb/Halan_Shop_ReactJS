@@ -6,6 +6,8 @@
   position: relative;
   width: inherit;
   height: inherit;
+  color: black;
+  box-shadow: 2px 4px rgb(253, 221, 230);
 }
 
 .category-picture-placeholder{
@@ -40,5 +42,6 @@
   margin-top: 0%;
   width: inherit;
   height: inherit;
+  
   
 }
