@@ -2,11 +2,17 @@ import React from "react";
 import "./SignInPage.css";
 
 const SignInPage = (props) => {
-return (
+
+function handleSignIn(){
+
+}
+
+    return (
     <div>
-        <h1 className="description-text">
-            Hi, this is our sign-in page
-        </h1>
+    <form onSubmit={handleSignIn} >
+        <input type="text" value="Email or Phone Number">
+        </input>
+    </form>
     </div>
     
 );
