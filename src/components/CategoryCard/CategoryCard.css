@@ -9,6 +9,9 @@
   color: black;
   box-shadow: 2px 4px rgb(253, 221, 230);
 }
+.category-card:hover {
+  cursor: pointer;
+}
 
 .category-picture-placeholder{
   position: absolute;

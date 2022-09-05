@@ -4,14 +4,13 @@ import { useParams } from "react-router-dom";
 import CategoryCard from "../CategoryCard/CategoryCard";
 import "./CategoriesPage.css";
 
-const CategoriesPage = (props) => {
-    let { categoryId } = useParams();
-    if (categoryId==null)
-    {
-        categoryId=0;
-    }
+const CategoriesPage = () => {
+
+    
 
     const[categoriesArray, setCategoriesArray]= useState([]);
+
+    const[currentCategoriesArray, setCurrentCategoriesArray]= useState([]);
 
     useEffect(() => {
         getAllCategories();
@@ -21,36 +20,47 @@ const CategoriesPage = (props) => {
         axios.get(process.env.REACT_APP_API_URL +"categories", {
           })
           .then(function (response) {
-            setCategoriesArray(response.data);
-            console.log(response);
+              setCategoriesArray(response.data.data);
+              setCurrentCategoriesArray(categoriesArray.filter(category=>category.level===0))
           })
           .catch(function (error) {
             setCategoriesArray([{
+              "level": 0,
+              "lineage": "App\\Models\\HomeAppliances",
               "id": 1,
-              "name": "ارایشی و بهداشتی",
-          },{
-            "id": 2,
-            "name": "پوشیدنی ها",
-        },{
-          "id": 3,
-          "name": "لوازم خانگی",
-      },{
-        "id": 4,
-        "name": "کالاهای دیجیتال",
-    },{
-      "id": 15,
-      "name": "ابزار",
-  }]);
+              "name": "Home applliances",
+            },{
+              "level": 1,
+              "lineage": "App\\Models\\HomeAppliances\\Electrical",
+              "id": 2,
+              "name": "Electrical",
+            },{
+              "level": 2,
+              "lineage": "App\\Models\\HomeAppliances\\Electrical\\Juicer",
+              "id": 3,
+              "name": "Juicer",
+            }]);
+            setCurrentCategoriesArray(categoriesArray.filter(category=> category.level===0))
           })
           .then(function () {
             // always executed
           });
     }
 
+    function handleCategoryClick(event){
+      let currentLevel =parseInt(event.currentTarget.dataset.level);
+      let currentId = parseInt(event.currentTarget.dataset.id);
+      let currentClass = event.currentTarget.dataset.lineage;
+      console.log(categoriesArray);
+      setCurrentCategoriesArray(categoriesArray.filter(category=> ((category.level===currentLevel+1) && (category.lineage.includes(currentClass)))));
+      console.log(categoriesArray);
+
+    }
+
 return (
     <div className="category-page-div">
         <div className="categories-list-ul">
-        {categoriesArray.map(category=><div className="category-card-li"><CategoryCard name ={category.name} id={category.id}/></div>)}
+        {currentCategoriesArray.map(category=><div data-id={category.id} data-lineage={category.lineage} data-level ={category.level} onClick={handleCategoryClick} className="category-card-li"><CategoryCard name ={category.name} id={category.id}/></div>)}
         </div>
     </div>
     

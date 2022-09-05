@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./CategoryCard.css";
-import logo from './icons/logo.png';
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
-
-
-
 
 const CategoryCard = (props) => {
 
@@ -20,14 +15,14 @@ const CategoryCard = (props) => {
 
     return (
       
-<Link to={"/categories/"+id} className="category-card">
+<div className="category-card">
           <div className="category-picture-placeholder">
             <img className="category-image" src={imageSrc} onError={imageOnErrorHandler} alt="category picture"/>
           </div>
           <div className="category-name-placeholder">
             <p className="category-name">{name}</p>
           </div>
-      </Link>
+      </div>
         
     );
   }
