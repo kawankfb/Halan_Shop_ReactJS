@@ -6,7 +6,6 @@ import "./CategoriesPage.css";
 
 const CategoriesPage = () => {
 
-    
 
     const[categoriesArray, setCategoriesArray]= useState([]);
 
@@ -18,42 +17,28 @@ const CategoriesPage = () => {
 
     const getAllCategories = () =>{
         axios.get(process.env.REACT_APP_API_URL +"categories", {
+          timeout:10000 ,
           })
           .then(function (response) {
               setCategoriesArray(response.data.data);
-              setCurrentCategoriesArray(categoriesArray.filter(category=>category.level===0))
+              setCurrentCategoriesArray(response.data.data.filter(category=>category.level===0));
           })
           .catch(function (error) {
-            setCategoriesArray([{
-              "level": 0,
-              "lineage": "App\\Models\\HomeAppliances",
-              "id": 1,
-              "name": "Home applliances",
-            },{
-              "level": 1,
-              "lineage": "App\\Models\\HomeAppliances\\Electrical",
-              "id": 2,
-              "name": "Electrical",
-            },{
-              "level": 2,
-              "lineage": "App\\Models\\HomeAppliances\\Electrical\\Juicer",
-              "id": 3,
-              "name": "Juicer",
-            }]);
-            setCurrentCategoriesArray(categoriesArray.filter(category=> category.level===0))
+            alert("Please refresh your page")
           })
           .then(function () {
             // always executed
+            
           });
+          
+
     }
 
     function handleCategoryClick(event){
       let currentLevel =parseInt(event.currentTarget.dataset.level);
       let currentId = parseInt(event.currentTarget.dataset.id);
       let currentClass = event.currentTarget.dataset.lineage;
-      console.log(categoriesArray);
       setCurrentCategoriesArray(categoriesArray.filter(category=> ((category.level===currentLevel+1) && (category.lineage.includes(currentClass)))));
-      console.log(categoriesArray);
 
     }
 

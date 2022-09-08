@@ -2,6 +2,7 @@ import React, { useEffect, useState }  from "react";
 import "./HomePage.css";
 import axios from 'axios';
 import ProductCard from "../ProductCard/ProductCard";
+import { Link } from "react-router-dom";
 
 const HomePage = (props) => {
 
@@ -61,14 +62,32 @@ const HomePage = (props) => {
     
 return (
     <div>
-        
-        <ul className="products-list">
+        <div className="section-title">پرفروش‌ترین ها</div>
+        <div className="products-list-div">
+        <ul className="products-list-ul">
             {productsArray.map(product=><li className="product-card-li"><ProductCard name ={product.name} price={product.current_price} id={product.id}/></li>)}
         </ul>
 
-        <ul className="products-list">
+        <Link className="products-list-index-button-container" to="/index_products?sort_by=most_popular&page=1">
+            <img className="products-list-index-button" src={process.env.PUBLIC_URL +"/icons/left-arrow.svg"} alt="index" />
+          </Link>
+        </div>
+        
+
+        <div className="section-title">جدید‌ترین ها</div>
+
+        <div className="products-list-div">
+        <ul className="products-list-ul">
             {productsArray.map(product=><li className="product-card-li"><ProductCard name ={product.name} price={product.current_price} id={product.id}/></li>)}
         </ul>
+
+      
+          <Link className="products-list-index-button-container" to="/index_products?sort_by=newest&page=1">
+            <img className="products-list-index-button" src={process.env.PUBLIC_URL +"/icons/left-arrow.svg"} alt="index" />
+          </Link>
+
+        </div>
+        
     </div>
     
 );

@@ -6,7 +6,7 @@
   position: relative;
   width: inherit;
   height: inherit;
-  color: black;
+  color: rgb(33, 13, 83);
   box-shadow: 2px 4px rgb(253, 221, 230);
 }
 
@@ -60,7 +60,7 @@
 .product-price {
   font-size: 1.1rem;
   margin-top: 0%;
-  color: rgb(0, 159, 61);
+  color: rgb(11, 192, 80);
   width: inherit;
   height: inherit;
   
