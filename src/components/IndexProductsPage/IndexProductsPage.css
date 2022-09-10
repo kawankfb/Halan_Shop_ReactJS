@@ -1,12 +1,17 @@
 .index-page-container{
-    height: calc(100vh - 60px);
+    height: calc(195vh - 60px);
     overflow-y: auto;
 }
+
+.index-page-container::-webkit-scrollbar {
+    display: none;
+  }
 
 .filter-bar{
     display: flex;
     position: sticky;
-    height: 10vh;
+    box-sizing: border-box;
+    height: 6%;
     justify-content: space-evenly;
     align-items: center;
     direction: rtl;
@@ -20,7 +25,7 @@
     justify-content: center;
     direction: rtl;
     border: 1px solid rgb(200, 95, 10);
-    margin: 1px;
+    margin: 5px;
     border-radius: 5px;
     box-shadow: 1px 1px rgb(255, 184, 223);
     width: 50%;
@@ -48,4 +53,88 @@
     direction: rtl;
     
     width: 30%;
+}
+
+.products-index-div{
+    display: block;
+    height: 94%;
+    overflow-y: scroll;
+    
+    width: 100%;
+}
+.products-index-div::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+
+.products-index-ul{
+    display: grid;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 45vw 45vw;
+    justify-content: center;
+    width: 100%;
+    column-gap: 10px;
+    row-gap: 10px;
+    min-height: 90vh;
+    max-height: 360vh;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    direction: rtl;
+
+}
+
+.products-index-card-li{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60vw;
+    }
+
+
+    
+@media screen and (min-width: 480px) {
+    .products-index-ul{
+        grid-template-columns: 30vw 30vw 30vw;
+       
+        }
+
+        .products-index-card-li{
+            height: 40vw;
+            }
+
+}
+      
+@media screen and (min-width: 768px) {
+    .products-index-ul{
+        grid-template-columns: 22.5vw 22.5vw 22.5vw 22.5vw;
+       
+        }
+        .products-index-card-li{
+            height: 30vw;
+            }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .products-index-ul{
+        grid-template-columns: 18vw 18vw 18vw 18vw 18vw;
+       
+        }
+        .products-index-card-li{
+            height: 24vw;
+            }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .products-index-ul{
+        grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+       
+        }
+        .products-index-card-li{
+            height: 20vw;
+            }
+
 }
