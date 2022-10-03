@@ -15,20 +15,20 @@ const IndexProductsPage = (props) => {
     const[mobileMode, setMobileMode]= useState(false);
 
     useEffect(()=>{
-        if(window.innerWidth > 719){
+        if(window.innerWidth > 767){
             setMobileMode(false);
         }
-        else if(window.innerWidth <= 719){
+        else if(window.innerWidth <= 767){
             setMobileMode(true);
         }
     },[]);
 
     useEffect(()=>{
         const handleResize = () =>{
-            if(window.innerWidth > 719){
+            if(window.innerWidth > 767){
                 setMobileMode(false);
             }
-            else if(window.innerWidth <= 719){
+            else if(window.innerWidth <= 767){
                 setMobileMode(true);
             }
         };
@@ -127,8 +127,17 @@ const IndexProductsPage = (props) => {
         );
     else
         return (
-            <div>
-                not mobile
+            <div className="index-page-container">
+                <div className="filter-menu-div">
+
+                </div>
+                <div className="products-index-div">
+        <ul className="products-index-ul">
+            {productsArray.map(product=><li className="products-index-card-li"><ProductCard name ={product.name} price={product.current_price} id={product.id}/></li>)}
+        </ul>
+
+      
+        </div>
             </div>
         );
 }

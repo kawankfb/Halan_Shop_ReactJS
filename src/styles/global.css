@@ -8,13 +8,30 @@ html, body{
  }
  ::-webkit-scrollbar-thumb{
     background:  rgb(224, 17, 95);
-    border-radius: 5px;
+    border-radius: 0px;
+    display: none;
  }
  
 
  ::-webkit-scrollbar {
     background: rgb(255, 209, 220);
     border-radius: 10px;
-    width: 7px;
-    height: 7px;
+    width: 0px;
+    height: 0px;
+    display: none;
+
+ }
+ @media screen and (min-width: 480px) {
+   ::-webkit-scrollbar-thumb{
+      background:  rgb(224, 17, 95);
+      border-radius: 5px;
+   }
+   
+  
+   ::-webkit-scrollbar {
+      background: rgb(255, 209, 220);
+      border-radius: 10px;
+      width: 7px;
+      height: 7px;
+   }
  }

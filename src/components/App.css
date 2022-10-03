@@ -6,6 +6,10 @@
   position: relative;
   display: block;
 }
+
+.nav-bar {
+  height: 100%;
+}
 .container {
     margin: 0;
     margin-top: 20px;
